@@ -1,0 +1,112 @@
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .nav {
+            margin: 0 50%;
+            width: 100%;
+            top: 100px;
+            position: absolute;
+            z-index:999;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="styles/components/decor.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="styles/components/die.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="styles/components/eating.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="styles/components/hud.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="styles/components/idle.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="styles/components/run.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="styles/components/sheep.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="styles/components/walk.css" media="all"/>
+</head>
+<body>
+<div id="world">
+    <div id="sky">&nbsp;</div>
+    <div id="grass_front">&nbsp;</div>
+    <div id="hud">
+        <div class="heart {% if mouton.getLife() < 0 %}inactive{% endif %}">&nbsp;</div>
+        <div class="heart {% if mouton.getLife() < 2 %}inactive{% endif %}">&nbsp;</div>
+        <div class="heart {% if mouton.getLife() < 4 %}inactive{% endif %}">&nbsp;</div>
+        <div class="heart {% if mouton.getLife() < 6 %}inactive{% endif %}">&nbsp;</div>
+        <div class="heart {% if mouton.getLife() < 8 %}inactive{% endif %}">&nbsp;</div>
+
+        <div class="spacing">&nbsp;</div>
+
+        <div class="hungry {% if mouton.getHunger() < 8 %}inactive{% endif %}">&nbsp;</div>
+        <div class="hungry {% if mouton.getHunger() < 6 %}inactive{% endif %}">&nbsp;</div>
+        <div class="hungry {% if mouton.getHunger() < 4 %}inactive{% endif %}">&nbsp;</div>
+        <div class="hungry {% if mouton.getHunger() < 2 %}inactive{% endif %}">&nbsp;</div>
+        <div class="hungry {% if mouton.getHunger() < 0 %}inactive{% endif %}">&nbsp;</div>
+
+        <div class="spacing">&nbsp;</div>
+
+        <div class="playful {% if mouton.getPlayfulness() < 0 %}inactive{% endif %}">&nbsp;</div>
+        <div class="playful {% if mouton.getPlayfulness() < 2 %}inactive{% endif %}">&nbsp;</div>
+        <div class="playful {% if mouton.getPlayfulness() < 4 %}inactive{% endif %}">&nbsp;</div>
+        <div class="playful {% if mouton.getPlayfulness() < 6 %}inactive{% endif %}">&nbsp;</div>
+        <div class="playful {% if mouton.getPlayfulness() < 8 %}inactive{% endif %}">&nbsp;</div>
+
+        <div class="spacing">&nbsp;</div>
+
+        <div class="sleep {% if mouton.getSleepiness() < 0 %}inactive{% endif %}">&nbsp;</div>
+        <div class="sleep {% if mouton.getSleepiness() < 2 %}inactive{% endif %}">&nbsp;</div>
+        <div class="sleep {% if mouton.getSleepiness() < 4 %}inactive{% endif %}">&nbsp;</div>
+        <div class="sleep {% if mouton.getSleepiness() < 6 %}inactive{% endif %}">&nbsp;</div>
+        <div class="sleep {% if mouton.getSleepiness() < 8 %}inactive{% endif %}">&nbsp;</div>
+    </div>
+
+    <div>
+        <div class="nav">
+            <form method="POST" action="">
+                <input id="run"  type="submit" name="action" value="Run"/>
+                <input id="sleep" type="submit" name="action" value="Sleep"/>
+                <input id="eat" type="submit" name="action" value="Eat"/>
+                <input id="idle" type="submit" name="action" value="Idle"/>
+                <input id="doctor" type="submit" name="action" value="Doctor"/>
+            </form>
+        </div>
+
+        <div id="sheep" class="idle_right">&nbsp;</div>
+    </div>
+
+    <div id="grass_back">&nbsp;</div>
+    <div id="treeone">&nbsp;</div>
+    <div id="treetwo">&nbsp;</div>
+    <div id="rockone">&nbsp;</div>
+    <div id="rocktwo">&nbsp;</div>
+</div>
+<script> 
+    let mouton = document.getElementById("sheep");
+
+    document.getElementById("run").addEventListener("click", (event) => {
+        event.preventDefault();
+        mouton.className = "run_right";
+    });
+
+    document.getElementById("sleep").addEventListener("click", (event) => {
+        event.preventDefault();
+        mouton.className = "die_right";
+    });
+
+    document.getElementById("eat").addEventListener("click", (event) => {
+        event.preventDefault();
+        mouton.className = "chew_right";
+    });
+
+    document.getElementById("idle").addEventListener("click", (event) => {
+        event.preventDefault();
+        mouton.className = "idle_right";
+    });
+
+    document.getElementById("doctor").addEventListener("click", (event) => {
+        event.preventDefault();
+        mouton.className = "walk_right";
+    });
+
+
+</script>
+</body>
+</html>
