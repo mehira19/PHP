@@ -1,0 +1,168 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a,
+.dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover,
+.dropdown:hover .dropbtn {
+    background-color: rgb(73, 47, 47);
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 15px;
+}
+
+#tableau dl {
+    width: 500px;
+    left: 150px;
+    border: 1px solid #000;
+    font-weight: bold;
+    position: relative;
+    margin: 5px;
+}
+
+#tableau dt {
+    border: 1px solid #000;
+    left: -155px;
+    width: 150px;
+    background-color: #EEEEEE;
+    position: absolute;
+    color: #0D5CAB;
+    margin-top: -1px;
+}
+
+#tableau dd {
+    text-align: right;
+    margin: 0;
+    color: #0D5CAB;
+}
+
+#pcts_75 dd {
+    width: 75%;
+    background-color: #FE3210;
+}
+
+#pcts_15 dd {
+    width: 45%;
+    background-color: #FE801E;
+}
+
+#pcts_4 dd {
+    width: 20%;
+    background-color: #FFC32A;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+.passive {
+    background-color: rgb(207, 21, 18);
+}
+
+.notification {
+    background-color: #555;
+    color: white;
+    text-decoration: none;
+    padding: 15px 26px;
+    position: relative;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+.notification:hover {
+    background: red;
+}
+
+.notification .badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    padding: 5px 10px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button3 {
+    background-color: rgb(30, 31, 27);
+}
+
+.button1 {
+    background-color: #4CAF50;
+}
+
+
+/* Green */
+
+.button2 {
+    background-color: #008CBA;
+}
+
+
+/* Blue *

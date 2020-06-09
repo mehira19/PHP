@@ -1,0 +1,3 @@
+http://localhost:8000/services/logout.php
+http://localhost:8000/rahim.php
+Tout d'abord j'ai créé une base de données Game avec une table users qui a pour attribut pseudo , passsword et score. Une fois connecté avec le localhost:8000/rahim.php vous serez sur une page dans laquelle vous pouvez vous inscrire une fois cela fait vos données sont automatiquement sauvegardées dans la bdd. Et aussi vous connecter et une fois connecté vous serez rediriger vers la page d'acceuil du joueur où tu verras tes statistique et le classement des 10 meilleurs joueurs. tu pourras également voir commencer tes match en attente ou encore lancer un match cela t'enverras sur une pasge de chargement et ensuite sur la page mactch ou tu pourras choisir le vainqueur.
